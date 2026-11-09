@@ -1,0 +1,24 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-8.3.4, pluggy-1.6.0 -- C:\Users\William\AppData\Local\Programs\Python\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\William\OpenBot\Agents\agent-e8bf4c44-8696-4a80-b3d8-22c20553959b\pbl-qualidade-software-2026-2\atividades\atividade-04
+plugins: anyio-4.14.1, asyncio-0.25.3, playwright-0.10.0
+asyncio: mode=Mode.STRICT, asyncio_default_fixture_loop_scope=None
+collecting ... collected 8 items
+
+tests/test_localeats.py::test_cadastro_de_novo_usuario_abre_home_com_restaurantes[chromium] PASSED [ 12%]
+tests/test_localeats.py::test_filtro_por_categoria_japonesa_exibe_somente_restaurantes_japoneses[chromium] PASSED [ 25%]
+tests/test_regras_localeats.py::test_pedido_acima_do_valor_minimo_retorna_true PASSED [ 37%]
+tests/test_regras_localeats.py::test_pedido_abaixo_do_valor_minimo_retorna_false PASSED [ 50%]
+tests/test_regras_localeats.py::test_pedido_com_valor_negativo_gera_value_error PASSED [ 62%]
+tests/test_regras_localeats.py::test_fronteira_do_valor_minimo[29.99-False] PASSED [ 75%]
+tests/test_regras_localeats.py::test_fronteira_do_valor_minimo[30-True] PASSED [ 87%]
+tests/test_regras_localeats.py::test_fronteira_do_valor_minimo[30.01-True] PASSED [100%]
+
+============================== warnings summary ===============================
+tests/test_localeats.py::test_cadastro_de_novo_usuario_abre_home_com_restaurantes[chromium]
+  C:\Users\William\AppData\Local\Programs\Python\Python314\Lib\site-packages\pytest_asyncio\plugin.py:1190: DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16
+    return asyncio.get_event_loop_policy()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 8 passed, 1 warning in 10.14s ========================
