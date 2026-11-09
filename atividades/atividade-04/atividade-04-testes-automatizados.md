@@ -86,7 +86,7 @@ Comportamento implementado:
 - pedidos abaixo de R$ 30,00 retornam `False`;
 - valores negativos geram `ValueError`.
 
-### 4.2 TDD de William Leite
+### 4.2 TDD
 
 **Regra escolhida:** valor mínimo do pedido (`pedido_atingiu_valor_minimo`).
 
