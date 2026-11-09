@@ -229,7 +229,7 @@ tests/test_regras_localeats.py::test_pedido_com_valor_negativo_gera_value_error 
 tests/test_regras_localeats.py::test_fronteira_do_valor_minimo[29.99-False] PASSED [ 75%]
 tests/test_regras_localeats.py::test_fronteira_do_valor_minimo[30-True] PASSED [ 87%]
 tests/test_regras_localeats.py::test_fronteira_do_valor_minimo[30.01-True] PASSED [100%]
-======================== 8 passed, 1 warning in 20.45s ========================
+======================== 8 passed, 1 warning in 6.57s ========================
 ```
 
 Todos os testes citados na tabela aparecem no relatório, sem aprovações pendentes. O relatório registra 1 warning interno do plugin `pytest-asyncio` (`asyncio.get_event_loop_policy`), sem relação com o código da atividade. Na execução local também aparece um aviso de configuração do mesmo plugin no stderr (`asyncio_default_fixture_loop_scope` não definido), que não entra no resumo do relatório e não afeta o resultado dos testes.

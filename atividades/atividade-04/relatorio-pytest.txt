@@ -21,4 +21,4 @@ tests/test_localeats.py::test_cadastro_de_novo_usuario_abre_home_com_restaurante
     return asyncio.get_event_loop_policy()
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================== 8 passed, 1 warning in 20.45s ========================
+======================== 8 passed, 1 warning in 6.57s =========================

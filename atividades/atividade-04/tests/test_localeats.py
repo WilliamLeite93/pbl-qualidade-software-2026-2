@@ -41,7 +41,6 @@ def esperar_restaurantes_filtrados(page, culinaria: str) -> None:
     )
 
 
-# Responsável: William Leite
 def test_cadastro_de_novo_usuario_abre_home_com_restaurantes(page):
     abrir_tela_de_login(page)
 
@@ -64,7 +63,6 @@ def test_cadastro_de_novo_usuario_abre_home_com_restaurantes(page):
     expect(page.locator("#restaurantGrid .loading")).to_have_count(0)
 
 
-# Responsável: William Leite
 @pytest.fixture
 def usuario_cadastrado(playwright):
     """Cria a conta pela API e devolve as credenciais para o login via interface."""
@@ -81,7 +79,6 @@ def usuario_cadastrado(playwright):
     return {"email": email, "senha": SENHA_PADRAO}
 
 
-# Responsável: William Leite
 def test_filtro_por_categoria_japonesa_exibe_somente_restaurantes_japoneses(
     page, usuario_cadastrado
 ):
