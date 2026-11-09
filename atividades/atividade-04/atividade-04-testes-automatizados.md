@@ -7,9 +7,9 @@
 | Unidade Curricular | Qualidade de Software |
 | Projeto | LocalEats |
 | Modalidade | Individual |
-| Integrante | William Leite |
+| Integrante | Integrante único |
 | Sistema testado | <https://local-eats-unisenac.vercel.app/> |
-| Data da execução | 06/11/2026 |
+| Data da execução | 09/11/2026 |
 | Ferramenta de execução | pytest 8.3.4 + pytest-playwright 0.10.0 + Playwright 1.64.1 (Chromium) |
 
 ## 2. Contexto e objetivo
@@ -159,7 +159,7 @@ Interações e locators usados:
 Assertions (5):
 
 1. a URL final termina em `/index.html`;
-2. o cabeçalho exibe `Olá, William` após o cadastro;
+2. o cabeçalho exibe `Olá, Usuário` após o cadastro;
 3. o primeiro card de restaurante fica visível (verificação usada também como espera da renderização);
 4. o grid apresenta pelo menos 5 restaurantes;
 5. o aviso de carregamento não está mais no DOM.
@@ -172,7 +172,7 @@ Fluxo: criar a conta pela API (preparação), entrar pela interface com e-mail e
 
 Assertions (6):
 
-1. o cabeçalho exibe `Olá, William` após o login;
+1. o cabeçalho exibe `Olá, Usuário` após o login;
 2. o primeiro card da carga inicial fica visível antes do filtro (verificação usada também como espera);
 3. o grid continua com pelo menos um restaurante;
 4. todos os cards exibidos contêm a culinária `Japonesa`;
@@ -202,12 +202,12 @@ Na primeira execução do TF02, o teste falhou com `Page.wait_for_function: Time
 
 | ID | Integrante | Tipo | Comportamento verificado | Arquivo e função |
 | --- | --- | --- | --- | --- |
-| TU01 | William Leite | Unitário | Pedido de R$ 50,00 atinge o valor mínimo | `tests/test_regras_localeats.py::test_pedido_acima_do_valor_minimo_retorna_true` |
-| TU02 | William Leite | Unitário | Pedido de R$ 20,00 não atinge o valor mínimo | `tests/test_regras_localeats.py::test_pedido_abaixo_do_valor_minimo_retorna_false` |
-| TU03 | William Leite | Unitário | Valor negativo gera `ValueError` | `tests/test_regras_localeats.py::test_pedido_com_valor_negativo_gera_value_error` |
-| TU04 | William Leite | Unitário | Fronteira de R$ 29,99, R$ 30,00 e R$ 30,01 | `tests/test_regras_localeats.py::test_fronteira_do_valor_minimo` |
-| TF01 | William Leite | Funcional | Cadastro de usuário e exibição da página inicial | `tests/test_localeats.py::test_cadastro_de_novo_usuario_abre_home_com_restaurantes[chromium]` |
-| TF02 | William Leite | Funcional | Filtro de restaurantes por culinária japonesa | `tests/test_localeats.py::test_filtro_por_categoria_japonesa_exibe_somente_restaurantes_japoneses[chromium]` |
+| TU01 | Integrante único | Unitário | Pedido de R$ 50,00 atinge o valor mínimo | `tests/test_regras_localeats.py::test_pedido_acima_do_valor_minimo_retorna_true` |
+| TU02 | Integrante único | Unitário | Pedido de R$ 20,00 não atinge o valor mínimo | `tests/test_regras_localeats.py::test_pedido_abaixo_do_valor_minimo_retorna_false` |
+| TU03 | Integrante único | Unitário | Valor negativo gera `ValueError` | `tests/test_regras_localeats.py::test_pedido_com_valor_negativo_gera_value_error` |
+| TU04 | Integrante único | Unitário | Fronteira de R$ 29,99, R$ 30,00 e R$ 30,01 | `tests/test_regras_localeats.py::test_fronteira_do_valor_minimo` |
+| TF01 | Integrante único | Funcional | Cadastro de usuário e exibição da página inicial | `tests/test_localeats.py::test_cadastro_de_novo_usuario_abre_home_com_restaurantes[chromium]` |
+| TF02 | Integrante único | Funcional | Filtro de restaurantes por culinária japonesa | `tests/test_localeats.py::test_filtro_por_categoria_japonesa_exibe_somente_restaurantes_japoneses[chromium]` |
 
 ## 7. Relatório da execução
 
@@ -229,7 +229,7 @@ tests/test_regras_localeats.py::test_pedido_com_valor_negativo_gera_value_error 
 tests/test_regras_localeats.py::test_fronteira_do_valor_minimo[29.99-False] PASSED [ 75%]
 tests/test_regras_localeats.py::test_fronteira_do_valor_minimo[30-True] PASSED [ 87%]
 tests/test_regras_localeats.py::test_fronteira_do_valor_minimo[30.01-True] PASSED [100%]
-======================== 8 passed, 1 warning in 10.14s ========================
+======================== 8 passed, 1 warning in 20.45s ========================
 ```
 
 Todos os testes citados na tabela aparecem no relatório, sem aprovações pendentes. O relatório registra 1 warning interno do plugin `pytest-asyncio` (`asyncio.get_event_loop_policy`), sem relação com o código da atividade. Na execução local também aparece um aviso de configuração do mesmo plugin no stderr (`asyncio_default_fixture_loop_scope` não definido), que não entra no resumo do relatório e não afeta o resultado dos testes.

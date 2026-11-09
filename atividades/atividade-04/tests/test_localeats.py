@@ -11,7 +11,7 @@ import pytest
 from playwright.sync_api import expect
 
 BASE_URL = "https://local-eats-unisenac.vercel.app"
-NOME_USUARIO = "William Leite"
+NOME_USUARIO = "Usuário Teste"
 SENHA_PADRAO = "senha123"
 
 
@@ -55,7 +55,7 @@ def test_cadastro_de_novo_usuario_abre_home_com_restaurantes(page):
 
     assert page.url.endswith("/index.html")
 
-    expect(page.locator("#userBadge")).to_contain_text("Olá, William")
+    expect(page.locator("#userBadge")).to_contain_text("Olá, Usuário")
 
     cards = page.locator(".rest-card")
     expect(cards.first).to_be_visible()
@@ -92,7 +92,7 @@ def test_filtro_por_categoria_japonesa_exibe_somente_restaurantes_japoneses(
     page.locator("#loginForm").get_by_role("button", name="Entrar").click()
 
     page.wait_for_url("**/index.html")
-    expect(page.locator("#userBadge")).to_contain_text("Olá, William")
+    expect(page.locator("#userBadge")).to_contain_text("Olá, Usuário")
 
     # Espera a carga inicial do grid terminar antes de filtrar, para não
     # disputar com a requisição que renderiza a lista completa.
